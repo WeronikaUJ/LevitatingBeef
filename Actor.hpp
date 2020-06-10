@@ -22,8 +22,8 @@ public:
 	virtual bool shouldBeErase() const {
 		return erase;
 	}
-  
-  virtual void onCollision(Actor* collider) {};
+
+	virtual void onCollision(Actor* collider) {};
 
 	virtual void setTag(const std::string& t) {
 		tag = t;
@@ -36,3 +36,4 @@ protected:
 	bool erase;
 	sf::Sprite sprite;
 };
+

@@ -1,7 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Actor.hpp"
-#include "Score.hpp"
 class Game
 {
 public:

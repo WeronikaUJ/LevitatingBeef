@@ -1,8 +1,6 @@
 #include "Game.hpp"
 
 #include "Player.hpp"
-#include "AsteroidSpawner.hpp"
-#include "Score.hpp"
 
 Game::Game() : deltaTime(1 / 60.f)
 {

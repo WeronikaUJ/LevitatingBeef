@@ -1,6 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Actor.hpp"
+#include "Score.hpp"
 class Game
 {
 public:
@@ -31,12 +32,18 @@ public:
 
 	void updateCollision();
 
+	void endGame() {
+		freeze = true;
+	}
 
 private:
 	Game();
     
+	void freezeScreen();
+
 	void init();
 
+	bool freeze;
 	std::vector<Actor*> actorVector;
 	std::vector<Actor*> queue;
 	float deltaTime;

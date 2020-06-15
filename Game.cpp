@@ -62,6 +62,40 @@ void Game::clear()
 	}
 }
 
+void Game::freezeScreen()
+{
+	sf::Text text;
+	sf::Font font;
+	font.loadFromFile("Assets/1.ttf");
+	text.setFont(font);
+	text.setString("You survived " + std::to_string(score->getScore()) + " seconds");
+	text.setCharacterSize(30);
+	text.setPosition(static_cast<sf::Vector2f>(window->getSize()) / 2.f);
+	while (window->isOpen())
+	{
+		sf::Event event;
+		while (window->pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window->close();
+			if (event.type == sf::Event::KeyReleased)
+			{
+				actorVector.clear();
+				init();
+				freeze = false;
+				score->reset();
+				return;
+			}
+		}
+		window->clear();
+
+		window->draw(text);
+
+		window->display();
+	}
+}
+
+
 void Game::run()
 {
 	init();
@@ -83,6 +117,9 @@ void Game::run()
 		draw();
 		window->display();
 		deltaTime = clock.getElapsedTime().asSeconds() - frameTimeStart;
+
+			if (freeze)
+		freezeScreen();
 	}
 }
 

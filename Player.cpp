@@ -5,6 +5,7 @@ Player::Player(float p, float sp)
 {
 
 }
+
 void Player::update()
 {
 	float deltaTime = Game::Instance().getDeltaTime();
@@ -31,5 +32,24 @@ void Player::update()
 	else sprite.setRotation(0);
 	sprite.move(0,curSpeed * deltaTime);
 
+	if (sprite.getPosition().y < 0)
+		Game::Instance().endGame();
+	if (sprite.getPosition().y > Game::Instance().getWindowSize().y)
+		Game::Instance().endGame();
+	if (sprite.getPosition().x < 0)
+		Game::Instance().endGame();
+	if (sprite.getPosition().x > Game::Instance().getWindowSize().x)
+		Game::Instance().endGame();
+
+
+}
+
+void Player::onCollision(Actor* collider)
+{
+	if (collider->getTag() == "asteroid")
+	{
+		Delete();
+		Game::Instance().endGame();
+	}
 }
 

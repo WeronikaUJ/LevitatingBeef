@@ -1,11 +1,19 @@
 #include "Game.hpp"
 
 #include "Player.hpp"
+#include "AsteroidSpawner.hpp"
+#include "Score.hpp"
+
+#include <iostream>
 
 Game::Game() : deltaTime(1 / 60.f)
 {
 	window = new sf::RenderWindow(sf::VideoMode(1366, 768),"space");
 	window->setFramerateLimit(60);
+	score = new Score();
+
+	score->getText().setCharacterSize(20);
+	score->getText().setPosition(20.f, 20.f);
 }
 
 
@@ -32,13 +40,16 @@ void Game::updateCollision()
 
 void Game::init()
 {
-	Player* p = new Player;
+	Player* p = new Player();
 	p->getSprite().setPosition(300, 200);
 	playerTex.loadFromFile("Assets/ship.png");
 	p->getSprite().setTexture(playerTex);
 	p->getSprite().setOrigin(static_cast<sf::Vector2f>(p->getSprite().getTexture()->getSize()) / 2.f);
 	p->getSprite().setScale(0.8, 0.8);
 	actorVector.push_back(p);
+
+	AsteroidSpawner* spawner = new AsteroidSpawner(1, 3);
+	actorVector.push_back(spawner);
 }
 
 
@@ -100,6 +111,7 @@ void Game::run()
 {
 	init();
 	sf::Clock clock;
+	
 	float frameTimeStart;
 	while (window->isOpen())
 	{
@@ -110,6 +122,13 @@ void Game::run()
 			if (event.type == sf::Event::Closed)
 				window->close();
 		}
+		if (!queue.empty())
+		{
+			for (auto k : queue) {
+				actorVector.push_back(k);
+			}
+			queue.clear();
+		}
 		updateCollision();
 		update();
 		clear();
@@ -118,11 +137,10 @@ void Game::run()
 		window->display();
 		deltaTime = clock.getElapsedTime().asSeconds() - frameTimeStart;
 
-			if (freeze)
-		freezeScreen();
+		if (freeze)
+			freezeScreen();
 	}
 }
-
 void Game::update()
 {
 	for (auto& k : actorVector)

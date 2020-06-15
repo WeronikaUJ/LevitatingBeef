@@ -9,6 +9,27 @@ Game::Game() : deltaTime(1 / 60.f)
 }
 
 
+
+void Game::updateCollision()
+{
+	for (auto it1 = actorVector.begin(); it1 != actorVector.end(); ++it1)
+	{
+		for (auto it2 = it1; it2 != actorVector.end(); ++it2)
+		{
+			if (it1 == it2)
+				continue;
+			auto c1 = (*it1)->getSprite().getGlobalBounds();
+			auto c2 = (*it2)->getSprite().getGlobalBounds();
+			if (c1.intersects(c2))
+			{
+				(*it1)->onCollision(*it2);
+				(*it2)->onCollision(*it1);
+			}
+		}
+	}
+}
+
+
 void Game::init()
 {
 	Player* p = new Player;
@@ -20,6 +41,26 @@ void Game::init()
 	actorVector.push_back(p);
 }
 
+
+void Game::clear()
+{
+	if (!actorVector.empty())
+	{
+		auto iterator = std::remove_if(actorVector.begin(), actorVector.end(), [](Actor* actor)->bool {
+			return actor->shouldBeErase();
+			});
+		if (iterator != actorVector.end())
+		{
+			auto cpIterator = iterator;
+			++cpIterator;
+			for (; cpIterator != actorVector.end(); ++cpIterator)
+			{
+				delete (*cpIterator);
+			}
+			actorVector.erase(iterator, actorVector.end());
+		}
+	}
+}
 
 void Game::run()
 {
@@ -37,8 +78,8 @@ void Game::run()
 		}
 		updateCollision();
 		update();
+		clear();
 		window->clear();
-
 		draw();
 		window->display();
 		deltaTime = clock.getElapsedTime().asSeconds() - frameTimeStart;

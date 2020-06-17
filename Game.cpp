@@ -143,11 +143,18 @@ void Game::run()
 }
 void Game::update()
 {
-	for (auto& k : actorVector)
-	{
-		k->update();
+		try {
+		for (auto& k : actorVector)
+		{
+			k->update();
+		}
+		score->update();
 	}
-	score->update();
+	catch (...)
+	{
+		freezeScreen();
+	}
+}
 }
 
 void Game::draw()

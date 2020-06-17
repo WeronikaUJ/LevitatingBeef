@@ -5,11 +5,12 @@ class Actor : public sf::Drawable
 {
 public:
 	Actor();
-	Actor(const Actor&) = default;
+	Actor(const Actor& source);
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
 		target.draw(sprite, states);
 	}
+
 	virtual sf::Sprite& getSprite() {
 		return sprite;
 	}

@@ -73,4 +73,5 @@ II) Sterowanie:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 III) Odpalanie
-Pobieramy repozytorium na linuksa i uruchamiamy grę za pomocą komendy make play. Na repozytorium znajduje się także archiwum .zip, w którym jest zbudowana aplikacja do testowania.
+Pobieramy repozytorium na linuksa i uruchamiamy grę za pomocą komendy make play. 
+Na repozytorium znajduje się także archiwum .zip, w którym jest zbudowana aplikacja do testowania.

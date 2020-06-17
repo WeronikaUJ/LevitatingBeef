@@ -2,7 +2,17 @@ Gra Levitating Beef - projekt zaliczeniowy C++
 
 Mieszkaniec planety Q145KIP8 odwiedził naszą Galaktykę. Jego podróż aż tutaj spowodowana jest chęcią konsumpcji wołowiny (którą gatunek ludzki uwielbia). W momencie wciągania krowy do swego statku promieniem, właz otwierający się zaciął i nie ma możliwości jego naprawy - zatem krowa lewituje w przestrzeni kosmicznej. Naszym zadaniem jest, aby Mućka, żyła jak najdłużej i nie uderzyła w żadną asteroidę.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-I) Elementy:
+II) Odpalanie
+Pobieramy repozytorium na linuksa i uruchamiamy grę za pomocą komędy make play. 
+Na repozytorium znajduje się także archiwum .zip, w którym jest zbudowana aplikacja do testowania.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+II) Sterowanie:
+↑ - przytrzymywanie strzałki skierowanej w górę pozwala na lot w górę ekranu
+↓ - strzałka w dół, powoduje obniżanie się statku kosmicznego
+→ - strzałka w prawo, lecimy w prawo
+← - strzałka w lewo, lecimy w lewo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+III) Elementy:
 
 1) Projekt obiektowy:
 
@@ -67,14 +77,4 @@ void Game::draw()
 
 - wyjątki: Game.cpp
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-II) Sterowanie:
-↑ - przytrzymywanie strzałki skierowanej w górę pozwala na lot w górę ekranu
-↓ - strzałka w dół, powoduje obniżanie się statku kosmicznego
-→ - strzałka w prawo, lecimy w prawo
-← - strzałka w lewo, lecimy w lewo
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-III) Odpalanie
-Pobieramy repozytorium na linuksa i uruchamiamy grę za pomocą komędy make play. 
-Na repozytorium znajduje się także archiwum .zip, w którym jest zbudowana aplikacja do testowania.
 

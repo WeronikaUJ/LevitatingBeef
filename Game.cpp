@@ -79,7 +79,7 @@ void Game::freezeScreen()
 	sf::Font font;
 	font.loadFromFile("Assets/1.ttf");
 	text.setFont(font);
-	text.setString("You survived " + std::to_string(score->getScore()) + " seconds");
+	text.setString("Przezyles " + std::to_string(score->getScore()) + " sekund");
 	text.setCharacterSize(30);
 	text.setPosition(static_cast<sf::Vector2f>(window->getSize()) / 2.f);
 	while (window->isOpen())

@@ -8,7 +8,7 @@
 
 Game::Game() : deltaTime(1 / 60.f)
 {
-	window = new sf::RenderWindow(sf::VideoMode(1366, 768),"space");
+	window = new sf::RenderWindow(sf::VideoMode(1366, 768),"LevitatingBeef");
 	window->setFramerateLimit(60);
 	score = new Score();
 

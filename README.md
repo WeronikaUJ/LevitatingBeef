@@ -1,6 +1,5 @@
 Gra Levitating Beef - projekt zaliczeniowy C++
 
-W skrócie:
 Mieszkaniec planety Q145KIP8 odwiedził naszą Galaktykę. Jego podróż aż tutaj spowodowana jest chęcią konsumpcji wołowiny (którą gatunek ludzki uwielbia). W momencie wciągania krowy do swego statku promieniem, właz otwierający się zaciął i nie ma możliwości jego naprawy - zatem krowa lewituje w przestrzeni kosmicznej. Naszym zadaniem jest, aby Mućka, żyła jak najdłużej i nie uderzyła w żadną asteroidę.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 I) Elementy:

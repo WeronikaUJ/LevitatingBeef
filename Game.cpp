@@ -155,7 +155,7 @@ void Game::update()
 		freezeScreen();
 	}
 }
-}
+
 
 void Game::draw()
 {

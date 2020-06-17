@@ -11,8 +11,8 @@ all:
 	$(CC) -c "Player.cpp" -o Player.o
 	$(CC) -c "Score.cpp" -o Score.o
 	$(CC) -c "main.cpp" -o main.o
-	$(CC) -o MojaGraWeronika Actor.o Asteroid.o 
-
-AsteroidSpawner.o Game.o Player.o Score.o main.o 
-	$(LIBS)
-  
+	$(CC) -o MojaGraWeronika Actor.o Asteroid.o AsteroidSpawner.o Game.o Player.o Score.o main.o $(LIBS)
+	
+.PHONY: play
+play: MojaGraWeronika
+	./MojaGraWeronika

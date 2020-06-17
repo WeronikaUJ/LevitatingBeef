@@ -67,14 +67,14 @@ void Game::draw()
 =======================================
 
 - wyjątki: Game.cpp
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 II) Sterowanie:
 ↑ - przytrzymywanie strzałki skierowanej w górę pozwala na lot w górę ekranu
 ↓ - strzałka w dół, powoduje obniżanie się statku kosmicznego
 → - strzałka w prawo, lecimy w prawo
 ← - strzałka w lewo, lecimy w lewo
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 III) Odpalanie
 Pobieramy repozytorium na linuksa i uruchamiamy grę za pomocą komędy make play. 
 Na repozytorium znajduje się także archiwum .zip, w którym jest zbudowana aplikacja do testowania.
